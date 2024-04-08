@@ -37,12 +37,12 @@ const Footer = () => {
               <img
                 src={LogoDark}
                 alt="Logo"
-                className="logo-dark hidden dark:flex max-w-[150px]"
+                className="logo-dark hidden dark:flex w-60 scale-100 -mt-2"
               />
               <img
                 src={LogoLight}
                 alt="Logo"
-                className="logo-light flex dark:hidden max-w-[150px]"
+                className="logo-light flex dark:hidden w-60 scale-100 -mt-2"
               />
             </h1>
             <br />
