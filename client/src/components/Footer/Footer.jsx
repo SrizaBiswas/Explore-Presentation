@@ -21,7 +21,7 @@ const FooterLinks = [
   {
     id: 4,
     title: "Instagram",
-    link: "https://www.instagram.com/_.aakanshaa.__/", // Change your_instagram_username to your Instagram username
+    link: "https://www.instagram.com/explore_wob?igsh=ZGUzMzM3NWJiOQ==", // Change your_instagram_username to your Instagram username
     icon: <FaInstagram />,
   },
 ];

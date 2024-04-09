@@ -13,7 +13,7 @@ import { useParams } from 'react-router-dom';
 import YourAddedBooks from "../components/UserProfile/YourAddedBooks.jsx";
 
 // Define the URL for the default profile image
-const defaultProfileImage = "/assests/booksanime-ezgif.com-crop.gif";
+const defaultProfileImage = "/client/public/assests/booksanime-ezgif.com-crop.gif";
 
 const UserProfile = () => {
   const { username, activepage } = useParams();
