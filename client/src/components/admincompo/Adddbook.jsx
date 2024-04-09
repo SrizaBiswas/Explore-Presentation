@@ -10,7 +10,7 @@ const WriteBook = () => {
   const [bkImage, setBkImage] = useState(null);
   const [book, setBook] = useState({
     bkname: "",
-    role: "user",
+    role: "admin",
     authname: "",
     bkgenre: "",
     desp: "",
