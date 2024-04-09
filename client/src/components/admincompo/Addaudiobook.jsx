@@ -140,7 +140,7 @@ const Addaudiobook = () => {
                   <input
                     type="file"
                     name="audioBkCon"
-                    accept=".m4a,.mp3"
+                    accept=".m4a,.mp3,.wav"
                     required
                     placeholder=" Add your books audio"
                     onChange={(e) => setaudioBkCon(e.target.files[0])}

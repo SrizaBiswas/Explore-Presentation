@@ -28,7 +28,7 @@ mongoose.connect(
   //exp-proj-db in mongodb -> browser collection
   // process.env.MONGO_URL,
   // "mongodb+srv://exp:exp123@clusterexp.xw5sehz.mongodb.net/session-exp?retryWrites=true&w=majority",
-  "mongodb+srv://exp:explore@explorecluster.yweprwi.mongodb.net/expdb?retryWrites=true&w=majority",//sri
+  "mongodb+srv://exp:explore@explorecluster.yweprwi.mongodb.net/expdb?retryWrites=true&w=majority", //sri
   //"mongodb+srv://exp:exp@cluster0.wpeuved.mongodb.net/session-exp?retryWrites=true&w=majority",//aaka
   // "mongodb+srv://exp:explore@cluster0.jxld2gx.mongodb.net/explore?retryWrites=true&w=majority",
   // "mongodb+srv://explore:explore@cluster0.jxld2gx.mongodb.net/expdb?retryWrites=true&w=majority&appName=Cluster0",
@@ -1930,8 +1930,8 @@ app.post("/store-payment-details", async (req, res) => {
     const { userId, username, paymentId, plan, date, amount, currency } =
       req.body;
     const pdfPath = `receipts/${paymentId}.pdf`; // Path where the PDF receipt will be saved
-    const logoPath = '../client/src/assets/website/more_semi_transparent_image.png'; // Adjust this to the path of your logo
-
+    const logoPath =
+      "../client/src/assets/website/more_semi_transparent_image.png"; // Adjust this to the path of your logo
 
     // Format the date for display
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -1951,11 +1951,10 @@ app.post("/store-payment-details", async (req, res) => {
     // Generate PDF receipt
     const doc = new PDFDocument();
     doc.pipe(fs.createWriteStream(pdfPath));
-    
-    const xPosition = (doc.page.width - 400) / 2;  
-const yPosition = (doc.page.height - 300) / 2; 
-doc.image(logoPath, xPosition, yPosition, { width: 400 });
-   
+
+    const xPosition = (doc.page.width - 400) / 2;
+    const yPosition = (doc.page.height - 300) / 2;
+    doc.image(logoPath, xPosition, yPosition, { width: 400 });
 
     doc.fontSize(24).text("Payment Receipt", 100, 80);
     doc.fontSize(16).moveDown().text(`Date: ${formattedDate}`, 100);
